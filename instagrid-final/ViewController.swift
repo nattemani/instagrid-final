@@ -24,6 +24,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragImageView(_:)))
         imageToShare.addGestureRecognizer(panGestureRecognizer)
         
+        
     }
     
     @IBAction func displayOne(_ sender: UIButton) {
@@ -100,7 +101,10 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage]
-        buttonTapped.setImage(image as? UIImage, for: .normal)
+        buttonTapped.setBackgroundImage(image as? UIImage, for: .normal)
+        buttonTapped.setImage(nil, for: .normal)
+        
+//        buttonTapped.imageView?.contentMode = .scaleAspectFit
         
         picker.dismiss(animated: true, completion: nil)
     }
