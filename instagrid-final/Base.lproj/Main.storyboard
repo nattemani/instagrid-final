@@ -53,42 +53,63 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-nr-DDo" userLabel="Grid">
-                                        <rect key="frame" x="0.0" y="239" width="293" height="300"/>
+                                        <rect key="frame" x="0.0" y="162.33333333333331" width="293" height="250"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apL-u9-g05">
-                                                <rect key="frame" x="0.0" y="0.0" width="293" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="293" height="125"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-5x-Ufc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="125"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U64-hJ-InD">
-                                                        <rect key="frame" x="146.66666666666663" y="0.0" width="146.33333333333337" height="150"/>
+                                                        <rect key="frame" x="146.66666666666663" y="0.0" width="146.33333333333337" height="125"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FH3-MG-Ok2">
-                                                <rect key="frame" x="0.0" y="150" width="293" height="150"/>
+                                                <rect key="frame" x="0.0" y="125" width="293" height="125"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-MJ-Zca">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="125"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX4-Xd-IMX">
-                                                        <rect key="frame" x="146.66666666666663" y="0.0" width="146.33333333333337" height="150"/>
+                                                        <rect key="frame" x="146.66666666666663" y="0.0" width="146.33333333333337" height="125"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.027450980390000001" green="0.4039215686" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="RSu-jz-KmR"/>
+                                            <constraint firstAttribute="height" constant="250" id="RSu-jz-KmR"/>
                                         </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-EZ-8ms" userLabel="Display Options">
+                                        <rect key="frame" x="0.0" y="504.66666666666657" width="293" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5H-eK-Xqb">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQl-i4-8hm">
+                                                <rect key="frame" x="97.666666666666657" y="0.0" width="97.666666666666657" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSm-Z2-qod">
+                                                <rect key="frame" x="195.33333333333334" y="0.0" width="97.666666666666657" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
