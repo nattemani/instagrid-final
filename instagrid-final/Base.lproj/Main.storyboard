@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Delm-Medium.otf">
+            <string>Delm-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,7 +28,37 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tiS-A4-iVb">
-                                <rect key="frame" x="50" y="179" width="293" height="539"/>
+                                <rect key="frame" x="50" y="179" width="293" height="42"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cIG-aA-xjK">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="42"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="upV-4Q-nrz">
+                                                <rect key="frame" x="0.0" y="0.0" width="293" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="Geo-9M-AJo"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Up to Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIg-F9-ZOU">
+                                                <rect key="frame" x="0.0" y="23" width="293" height="19"/>
+                                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="upV-4Q-nrz" firstAttribute="top" secondItem="cIG-aA-xjK" secondAttribute="top" id="3Uh-Mk-jj3"/>
+                                            <constraint firstItem="upV-4Q-nrz" firstAttribute="centerX" secondItem="cIG-aA-xjK" secondAttribute="centerX" id="bZF-uz-MeH"/>
+                                            <constraint firstAttribute="height" constant="70" id="pcm-0z-SCQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cIG-aA-xjK" secondAttribute="trailing" id="W86-OL-uN0"/>
+                                    <constraint firstItem="cIG-aA-xjK" firstAttribute="top" secondItem="tiS-A4-iVb" secondAttribute="top" id="pbc-WD-YYC"/>
+                                    <constraint firstItem="cIG-aA-xjK" firstAttribute="top" secondItem="tiS-A4-iVb" secondAttribute="top" id="sBy-kd-Qxt"/>
+                                    <constraint firstItem="cIG-aA-xjK" firstAttribute="leading" secondItem="tiS-A4-iVb" secondAttribute="leading" id="yzH-BS-5LD"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -44,6 +79,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
         <image name="Instagrid" width="41.333332061767578" height="13"/>
     </resources>
 </document>
