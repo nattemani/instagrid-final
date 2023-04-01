@@ -69,11 +69,15 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     }
     func transformImageToShareView(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: imageToShare)
+        if UIDevice.current.orientation.isLandscape {
+            imageToShare.transform = CGAffineTransform(translationX: translation.x, y: 0)
+           } else {
+               imageToShare.transform = CGAffineTransform(translationX: 0, y: translation.y)
+           }
         
-        imageToShare.transform = CGAffineTransform(translationX: 0, y: translation.y)
     }
     func shareImg(gesture: UIPanGestureRecognizer) {
-        if (gesture.translation(in: imageToShare).y < 0) {
+        if (gesture.translation(in: imageToShare).y < 0 || gesture.translation(in: imageToShare).x < 0  ) {
             let renderer = UIGraphicsImageRenderer(size: imageToShare.bounds.size)
             let image = renderer.image { ctx in
                 imageToShare.drawHierarchy(in: imageToShare.bounds, afterScreenUpdates: true)
@@ -81,6 +85,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
             
             let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             self.present(activityViewController, animated: true, completion: nil)
+            
+            UIView.animate(withDuration: 0.5) {
+                self.imageToShare.transform = CGAffineTransformIdentity;
+            }
+        
         } else {
             print("not shared")
         }
